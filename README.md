@@ -12,7 +12,7 @@ The existing codebase for the Whole Number Divider meets certain user stories bu
 
 #### Starter Code
 
-The provided HTML and JavaScript setup a basic form for inputting two numbers (dividend and divider) and a button to perform the calculation. The current script captures form submissions and displays the division result. However, it lacks validation, error handling, and the logic to meet all user stories.
+The provided HTML and JavaScript setup a basic form for inputting two numbers (dividend and divider) and a button to perform the calculation. The current script captures form submissions and displays the division result. However, **it lacks validation, error handling, and the logic to meet all user stories.**!!
 
 <h2 style="color:#e67e22">Resolved Stories</h2>
 
@@ -39,15 +39,15 @@ The provided HTML and JavaScript setup a basic form for inputting two numbers (d
 - GIVEN that the submit button is pressed
 - WHEN 20 is entered into the first input
 - AND 3 is entered into the second input
-- THEN the number 6 with no decimal should be shown
+- THEN the number 6 with *no decimal should be shown*!!
  
 
-### Scenario: Validation when values are missing
+### Scenario: Validation when values are missing!!
 
 - GIVEN that the submit button is pressed
 - WHEN either or both inputs are empty
 - THEN the divisions should not be done
-- AND the following should be displayed: “Division not performed. Both values are required in inputs. Try again”.
+- AND the following should be displayed: “Division not performed. Both values are required in inputs. Try again”.!!
  
 
 ### Scenario: An invalid division should log an error in the console
