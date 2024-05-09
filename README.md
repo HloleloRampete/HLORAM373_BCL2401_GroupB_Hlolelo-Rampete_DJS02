@@ -2,7 +2,6 @@
 
 This project focuses on enhancing a web-based Whole Number Divider application. It's designed to help students apply their knowledge of error handling, guided by specific user stories. Before proceeding, familiarise yourself with the Gherkin syntax, a crucial tool for understanding user stories and requirements. Refer to the provided reading materials for a comprehensive guide. Below is the HTML and JavaScript code for a “Whole Number Divider”. At the moment it only meets two user stories (see below under “Resolved Stories”). Please ensure that it meets all user stories listed below:
 
-This exercise provides user stories in [the Gherkin syntax](https://docs.behat.org/en/v2.5/guides/1.gherkin.html). Please make sure you understand the use and meaning of this syntax before continuing. Check out this resource from [Cucumber](https://cucumber.io/docs/gherkin/reference/).
 
 #### Project Overview
 
@@ -10,76 +9,29 @@ The existing codebase for the Whole Number Divider meets certain user stories bu
 
 ![alt text](image.png)
 
-#### Starter Code
+# Division Form Challenge
+This project is a simple web page that allows users to input two numbers and calculates their division. The project was created to practice error handling, validation, and logic in JavaScript.
 
-The provided HTML and JavaScript setup a basic form for inputting two numbers (dividend and divider) and a button to perform the calculation. The current script captures form submissions and displays the division result. However, **it lacks validation, error handling, and the logic to meet all user stories.**!!
+### How it works
+The project consists of an HTML file and a JavaScript file. The HTML file contains a form with two input fields and a submit button. The JavaScript file listens for a submit event on the form, prevents the default form submission behavior, and performs the following steps:
 
-<h2 style="color:#e67e22">Resolved Stories</h2>
+1. Creates a new FormData object from the form.
+2. Extracts the dividend and divider values from the FormData object.
+3. Checks if the inputs are numbers and if the divider is zero.
+4. If the inputs are not numbers or if the divider is zero, it displays an error message and logs an error in the console.
+5. If both inputs are empty, it displays an error message.
+6. If the inputs are numbers and the divider is not zero, it calculates the division and displays the result on the page.
 
-1. **Initial State**: On page load, the message “No calculation performed” is displayed, indicating no action has been taken yet.
-2. **Whole Number Division**: Upon submitting two numbers that divide evenly (e.g., 20 divided by 10), the application correctly displays the whole number result.
+### Making it robust
+To make the project robust, I added error handling and validation to the JavaScript code. Here are the steps I took:
 
-### Scenario: Starting program state
+1. I used the isNaN() function to check if the inputs are numbers. If the inputs are not numbers, it displays an error message and logs an error in the console.
+2. I checked if the divider is zero. If the divider is zero, it displays an error message and logs an error in the console.
+3. I checked if both inputs are empty. If both inputs are empty, it displays an error message.
+4. I used the Math.floor() function to round down the result to the nearest whole number.
 
-- GIVEN that the submit button has not been pressed yet
-- AND the code has just loaded
-- THEN “NO calculation performed” should be displayed at the bottom
+By adding these checks and error messages, I ensured that the project can handle invalid inputs and display helpful error messages to the user. This makes the project more robust and user-friendly.
 
-### Scenario: Dividing numbers result in a whole number
 
-- GIVEN that the submit button is pressed
-- WHEN 20 is entered into the first input
-- AND 10 is entered into the second input
-- THEN 2 should be displayed at the bottom
- 
-<h2 style="color:#e67e22">Unresolved Stories</h2> 
 
-### Scenario: Dividing numbers result in a decimal number
-
-- GIVEN that the submit button is pressed
-- WHEN 20 is entered into the first input
-- AND 3 is entered into the second input
-- THEN the number 6 with *no decimal should be shown*!!
- 
-
-### Scenario: Validation when values are missing!!
-
-- GIVEN that the submit button is pressed
-- WHEN either or both inputs are empty
-- THEN the divisions should not be done
-- AND the following should be displayed: “Division not performed. Both values are required in inputs. Try again”.!!
- 
-
-### Scenario: An invalid division should log an error in the console
-
-- GIVEN that the submit button is pressed
-- WHEN 20 is entered into the first input
-- AND 0 is entered into the second input
-- THEN the division should not be done
-- AND the following should be displayed: “Division not performed. Invalid number provided. Try again”.
-- AND an error should be logged in the browser console that shows the call stack
-- BUT the program should not crash entirely
- 
-
-### Scenario: Providing anything that is not a number should crash the program
-
-- GIVEN that the submit button is pressed
-- WHEN ‘YOLO’ is entered into the first input
-- AND ‘+++’ is entered into the second input
-- THEN the entire screen should be replaced with “Something critical went wrong. Please reload the page
-- AND an error should be logged in the browser console that shows the call stack.
-
-#### Task Instructions
-
-1. **Review the Starter Code**: Understand the current implementation and its limitations.
-2. **Implement User Stories**: Modify the code to fulfill all unresolved user stories. Pay attention to error handling and user input validation.
-3. **Error Handling**: Ensure the application handles errors gracefully, providing clear feedback to the user without crashing.
-4. **Testing**: Test your application thoroughly with various inputs to ensure it meets all the user stories.
-
-#### Submission Requirements
-
-- Updated HTML and JavaScript files.
-- Submit your project to the LMS Project Tab for DJS02
-
-This project challenges you to think critically about user input, error handling, and providing a seamless user experience. Ensure your solution is robust, user-friendly, and meets the specified requirements.
 
